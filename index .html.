@@ -1,0 +1,171 @@
+
+
+index.html
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saif Raphael — Creative Editing & Presentations</title>
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- fav icon (replace or remove) -->
+  <meta name="description" content="Professional video editing, photo edits and presentation design. Fast turnaround and affordable packages." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="#">Saif Raphael</a>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h1>I’ll edit your videos, photos & presentations — fast and pro</h1>
+          <p>Montages, YouTube/TikTok clips, thumbnails, photo retouch, PowerPoint design — I do it all. Clear prices, sample work, and fast replies.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Get a quote</a>
+            <a class="btn ghost" href="#portfolio">See work</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-title">Quick order</div>
+          <form id="leadForm" onsubmit="submitForm(event)">
+            <label>
+              Your name
+              <input name="name" required placeholder="Your name">
+            </label>
+            <label>
+              Service
+              <select name="service">
+                <option>Short video edit (TikTok/Shorts)</option>
+                <option>Full video editing (YouTube)</option>
+                <option>Photo edits / thumbnails</option>
+                <option>PowerPoint / presentation design</option>
+                <option>Other (explain in message)</option>
+              </select>
+            </label>
+            <label>
+              Contact (email or WhatsApp)
+              <input name="contact" required placeholder="you@mail.com or +974xxxxxxxx">
+            </label>
+            <label>
+              Notes
+              <textarea name="notes" placeholder="Short brief, deadline..."></textarea>
+            </label>
+            <button type="submit" class="btn primary">Send request</button>
+            <div class="small">Or email: <a href="mailto:youremail@example.com">youremail@example.com</a></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="wrap services">
+      <h2>Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Short Video Edits</h3>
+          <p>TikTok / Reels / Shorts: fast cuts, captions, beat sync, color grade.</p>
+        </div>
+        <div class="card">
+          <h3>Full Video Editing</h3>
+          <p>Longform edits, B-roll, transitions, basic color grading, subtitles.</p>
+        </div>
+        <div class="card">
+          <h3>Photo & Thumbnail</h3>
+          <p>Retouch, background remove, clickworthy thumbnails and banners.</p>
+        </div>
+        <div class="card">
+          <h3>PowerPoint Design</h3>
+          <p>Professional slides, animations, charts, speaker notes and export to PDF.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="wrap portfolio">
+      <h2>Portfolio</h2>
+
+      <p class="muted">Below are sample thumbnails — replace these with your own screenshots or links to YouTube/Vimeo/GDrive.</p>
+
+      <div class="grid images">
+        <div class="img-card"><img src="https://via.placeholder.com/600x350?text=Video+Sample+1" alt="sample"></div>
+        <div class="img-card"><img src="https://via.placeholder.com/600x350?text=Thumbnail+Example" alt="sample"></div>
+        <div class="img-card"><img src="https://via.placeholder.com/600x350?text=PowerPoint+Slide" alt="sample"></div>
+        <div class="img-card"><img src="https://via.placeholder.com/600x350?text=Photo+Edit" alt="sample"></div>
+      </div>
+
+      <p class="muted">Want these images replaced? Upload images to an image host (Imgur, Google Drive public link) and update the <img> src in the HTML file on GitHub.</p>
+    </section>
+
+    <section id="pricing" class="wrap pricing">
+      <h2>Pricing (examples)</h2>
+      <div class="grid">
+        <div class="card price">
+          <h3>Basic Short</h3>
+          <p class="price-num">$10</p>
+          <p>15–30s edit, 1 revision</p>
+        </div>
+        <div class="card price">
+          <h3>Full Edit</h3>
+          <p class="price-num">$40</p>
+          <p>5–10min video, 2 revisions</p>
+        </div>
+        <div class="card price">
+          <h3>Presentation</h3>
+          <p class="price-num">$15</p>
+          <p>10 slides, speaker notes</p>
+        </div>
+      </div>
+      <p class="muted">Adjust prices to your market. Offer bundle discounts for repeat customers.</p>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <h2>Contact</h2>
+      <p>Best ways to reach me:</p>
+      <ul>
+        <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+        <li>WhatsApp: <a href="https://wa.me/974XXXXXXXX">+974 XXXXXXXXX</a></li>
+        <li>Instagram / DM: <a href="https://instagram.com/yourhandle">@yourhandle</a></li>
+      </ul>
+
+      <p class="muted">Payments: PayPal, bank transfer, or local methods. Always confirm before delivering high-value work.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>© <span id="year"></span> Saif Raphael — Editing & Presentations</div>
+      <div class="small">Made with a gaming laptop • Code: editable on GitHub Pages</div>
+    </div>
+  </footer>
+
+  <script>
+    // small JS: basic form handler (this just opens mailto as a quick no-backend solution)
+    function submitForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value || '');
+      const service = encodeURIComponent(f.service.value || '');
+      const contact = encodeURIComponent(f.contact.value || '');
+      const notes = encodeURIComponent(f.notes.value || '');
+      const subject = encodeURIComponent('New order: ' + service + ' — ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\\nService: ' + service + '\\nContact: ' + contact + '\\nNotes: ' + notes);
+      window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
